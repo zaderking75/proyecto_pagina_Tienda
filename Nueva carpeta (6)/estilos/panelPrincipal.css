@@ -1,0 +1,284 @@
+/* cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+}
+
+/* barra  */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 30px;
+  position: relative;
+  width: auto;
+  background-color: #333;
+  color: white;
+}   
+
+/* para el ajuste de la barra al bajar*/
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 98%; 
+  background-color: #333;
+  padding: 10px 30px; 
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.search-bar input[type="text"] {
+  padding: 7px;
+  font-size: 16px;
+  border-radius: 100px;
+  border: none;
+  width: 700px;
+  height: 20px;
+  max-width: 70vw;
+  min-width: 200px;
+    
+}
+  
+.header-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+  
+.header-icons div {
+    cursor: pointer;
+}
+
+.icon-cart {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.carrito-contador {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff5722;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  user-select: none;
+  pointer-events: none; /* para que no interfiera con el clic */
+}
+
+.icon-cart::before {
+    content: "🛒";
+    font-size: 1.5em;
+}
+  
+.icon-heart::before {
+    content: "❤️";
+    font-size: 1.5em;
+}
+  
+.icon-profile::before {
+  content: "👤";
+  font-size: 1.5em;
+}
+
+
+
+/*para los contenederos*/
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+ 
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    margin-top: 20px;
+}
+  
+.store-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  
+}
+
+.store-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.store-container img {
+    width: 100%;
+    display: block;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+    height: 180px;
+}
+
+.store-container .content {
+    padding: 15px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.store-container h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.store-container p {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.store-container button {
+    background-color: #ff5722;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.store-container button:hover {
+    background-color: #e64a19;
+}
+
+
+/* footer */
+.footer {
+  background-color: #222;
+  color: #ddd;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+  user-select: none;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-section {
+  flex: 1 1 250px;
+}
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ff5722;
+}
+.footer-section p, .footer-section ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+.footer-section ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-section ul li a:hover {
+  color: #ff5722;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.social-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translate(-50%, -50%);
+}
+/* Ejemplos de iconos con imágenes o  íconos */
+/* copia de otro codigo para añadir redes sociales y que se vea bonito */
+.social-icon.facebook {
+  background-color: #3b5998;
+}
+.social-icon.facebook::before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB2aWV3Qm94PSIwIDAgMTIgMTIiPjxwYXRoIGQ9Ik00LjUgNC42djIuMmgxLjZ2My4xSDh2LTMuMWgxLjVsLjItMi4yaC0xLjVsLjEtMS4zYzAtLjMuMS0xIC45LTFoMS41di0yLjJoLTEuNGMtMi4xIDAtMi40LjIgLTIuNCAyLjd6Ii8+PC9zdmc+");
+}
+.social-icon.twitter {
+  background-color: #55acee;
+}
+.social-icon.twitter::before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB2aWV3Qm94PSIwIDAgMTIgMTIiPjxwYXRoIGQ9Ik0xMSAyYy0uNC4xLS44LjMtMS4yLjQtLjMuMi0uOS4xLTEuMy0uMSAxLjItLjEgMi4xLTEuMSAyLjEtMi40IDAtLjEgMCAwIDAtLjFsLTEuMCAxLjNjLS42LS4xLS45LS40LTEuMi0uNWExLjYgMS42IDAgMCAwLTEuMS43YzEuNi41IDEuOCAxLjMgMi4yIDIuNy0xIDAgLS40IDIuMi0xLjd6Ii8+PC9zdmc+");
+}
+.social-icon.instagram {
+  background-color: #e4405f;
+}
+.social-icon.instagram::before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB2aWV3Qm94PSIwIDAgMTIgMTIiPjxjaXJjbGUgY3g9IjYiIGN5PSI2IiByPSI0Ii8+PHBhdGggZD0iTTYgMGMzLjMgMCA2IDIgNiA2IDAgMy0yLjcgNS0xIDAgMy00IDAtNi0wem0wIDJhMyA0IDAgMSAwIDAgNiIvPjwvc3ZnPg==");
+}
+.social-icon.linkedin {
+  background-color: #0077b5;
+}
+.social-icon.linkedin::before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmIiB2aWV3Qm94PSIwIDAgMTIgMTIiPjxwYXRoIGQ9Ik00LjggNS43SDMuOXYzLjFoMS45djMuOGgydjMuOGg0VjEwLjVoNi40di0zaDRWMTEoMi45IDggMTAgN2MwIDIgMC0xIDIueiIvPjwvc3ZnPg==");
+}
+.social-icon:hover {
+  background-color: #ff5722;
+  transform: scale(1.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
