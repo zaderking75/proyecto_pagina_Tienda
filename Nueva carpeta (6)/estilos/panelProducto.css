@@ -54,6 +54,18 @@ header nav a:hover {
     text-decoration: underline;
 }
 
+.search-bar input[type="text"] {
+  padding: 7px;
+  font-size: 16px;
+  border-radius: 100px;
+  border: none;
+  width: 700px;
+  height: 20px;
+  max-width: 70vw;
+  min-width: 200px;
+    
+}
+
 /* Main producto */
 .producto-detalle {
     width: 90vw;
