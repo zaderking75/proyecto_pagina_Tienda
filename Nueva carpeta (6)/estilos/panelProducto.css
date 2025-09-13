@@ -89,8 +89,37 @@ header nav a:hover {
   padding: 12px 28px;     
 }
 
+/*  */
+.producto-texto label[for="cantidad"] {
+  display: block;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  margin-left: 5px; /* Similar al h2 */
+  color: #222;
+  font-weight: bold;
+}
 
+.producto-texto input#cantidad {
+  width: 60px;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  vertical-align: middle;
+  margin-left: 5px;
+}
 
+.producto-texto .botones-contenedor {
+  margin-top: 12px;
+}
+
+.producto-texto .btn-favorito {
+  margin-left: 12px;
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+
+/*  */
 
 .producto-detalle h2 {
     margin-top: 0;
@@ -115,6 +144,9 @@ header nav a:hover {
     font-size: 1rem;
     margin: 0.5rem 0;
 }
+
+
+
 
 .btn-comprar {
     background-color: #ff5722;

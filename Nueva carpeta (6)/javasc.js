@@ -24,13 +24,17 @@ function anadirAlCarrito(event, productName) {
 }
 /*  */
 function irACarrito() {
-  if(carrito.length === 0) {
-    alert("No tienes artículos en el carrito.");
-  } else {
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    window.location.href = './pagina-carrito.html';
-  }
+    window.location.href = './carrito.html';
 }
+
+function irAFavoritos() {
+  window.location.href = './favoritos.html';
+}
+
+function irAPerfil() {
+  window.location.href = './perfil.html';
+}
+
 
 // Inicializa contador cuando carga la página
 document.addEventListener('DOMContentLoaded', () => {
