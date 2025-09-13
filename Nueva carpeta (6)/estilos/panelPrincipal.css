@@ -34,6 +34,14 @@ body {
     font-weight: bold;
 }
 
+.logo img{
+    width: 100%;
+    display: block;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+    height: 75px;
+}
+
 .search-bar input[type="text"] {
   padding: 7px;
   font-size: 16px;
