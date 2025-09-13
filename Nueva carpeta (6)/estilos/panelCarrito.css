@@ -3,6 +3,17 @@ body {
     font-family: Arial, sans-serif;
     background: #f5f5f5;
     margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+  margin-top: auto; 
 }
 
 /* barra  */
@@ -291,20 +302,77 @@ h1 {
 }
 
 /* integración carrito */
-.carrito-contenido {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    min-height: 150px; /* altura mínima para evitar scroll innecesario */
-    overflow-y: hidden; /* oculto por defecto, se activa con JS si hay productos */
-}
+
+
+
 .producto-carrito {
-    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
     padding: 15px;
+    background: #fafafa;
     border-radius: 12px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    margin-bottom: 15px;
+}
+.producto-img {
+    width: 120px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.producto-info {
+    flex: 1;
+    font-size: 1rem;
+}
+.producto-controles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.producto-controles button {
+    cursor: pointer;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease;
+}
+.producto-controles button:hover {
+    background-color: #e64a19;
+}
+
+
+
+#mensaje-vacio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  max-width: 450px;
+  margin: 60px auto;
+  padding: 20px 30px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff5722;
+  background: linear-gradient(135deg, #fff5f0, #ffccbc);
+  border-radius: 16px;
+  box-shadow:
+    0 8px 16px rgba(255, 87, 34, 0.1),
+    0 4px 8px rgba(255, 87, 34, 0.05);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
 }

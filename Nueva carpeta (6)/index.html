@@ -44,14 +44,20 @@
   <!-- cuerpo main  -->
   <main>
   <div class="productos-grid">
-      <a href="./productos/producto1.html" class="store-container">
-        <img src="./image/images.jpg"  alt="Producto 1" />
-        <div class="content">
-          <h3>Venus AtrapaMoscas</h3>
-          <p>Descripción breve y atractiva del Producto 1.</p>
-          <button type="button" onclick="anadirAlCarrito(event, 'Producto 1')">Añadir al carrito</button>
-        </div>
-      </a>
+
+<a href="./productos/producto1.html" class="store-container">
+  <img src="./image/images.jpg" alt="Venus atrapamoscas" />
+  <div class="content">
+    <h3>Venus atrapamoscas</h3>
+    <p>Planta carnívora icónica para coleccionistas.</p>
+    <p><strong>$25000</strong></p>
+    <button 
+      type="button" 
+      onclick="anadirAlCarrito(event, 'Venus atrapamoscas', './image/images.jpg', 25000, 'Planta carnívora icónica para coleccionistas.')">
+      Añadir al carrito
+    </button>
+  </div>
+</a>
 
       <a href="./productos/producto2.html" class="store-container">
         <img src="./image/Sarracenias.jpg" alt="Producto 2" />
@@ -192,4 +198,5 @@
 </body>
 <!-- script que carja el archivo javasc.js -->
   <script src="javasc.js"></script>
+  <script src="carrito.js"></script>
 </html>

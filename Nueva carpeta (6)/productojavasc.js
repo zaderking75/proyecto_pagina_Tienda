@@ -2,8 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.btn-favorito').addEventListener('click', function() {
     this.classList.toggle('liked');
   });
+});
 
-  document.getElementById('agregar-carrito').addEventListener('click', function() {
+document.addEventListener('DOMContentLoaded', function () {
+  const btnAgregar = document.getElementById('agregar-carrito');
+  if (!btnAgregar) return;
+
+  btnAgregar.addEventListener('click', function (event) {
+    event.preventDefault();
     const cantidadInput = document.getElementById('cantidad');
     let cantidad = parseInt(cantidadInput.value, 10);
     if (isNaN(cantidad) || cantidad < 1) {
@@ -12,6 +18,28 @@ document.addEventListener('DOMContentLoaded', function() {
       cantidadInput.focus();
       return;
     }
-    alert(`Venus atrapamoscas añadido al carrito. Cantidad: ${cantidad}`);
+
+    const nombre = btnAgregar.getAttribute('data-nombre');
+    const imagen = btnAgregar.getAttribute('data-imagen');
+    const precio = parseInt(btnAgregar.getAttribute('data-precio'), 10);
+    const descripcion = btnAgregar.getAttribute('data-descripcion');
+
+    // Cargar, agregar y guardar producto
+    cargarCarrito();
+    let productoExistente = carrito.find(item => item.nombre === nombre);
+    if (productoExistente) {
+      productoExistente.cantidad += cantidad;
+    } else {
+      carrito.push({
+        nombre: nombre,
+        cantidad: cantidad,
+        imagen: imagen,
+        precio: precio,
+        descripcion: descripcion
+      });
+    }
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    alert(`${nombre} añadido al carrito. Cantidad: ${cantidad}`);
+    actualizarContadorCarrito();
   });
 });
