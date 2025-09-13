@@ -31,9 +31,18 @@
                 <p><strong>Tamaño:</strong> 40cm x 10cm</p>
                 <p><strong>Método de Plantado:</strong> Plantar en un lugar con sol directo, mantener tierra humeda</p>
                 <p><strong>Descripción:</strong> Planta ideal para interiores, fácil de cuidar y resistente.</p>
-                <button class="btn-comprar">Añadir al carrito</button>
-                <button class="btn-favorito" title="Favorito">&#10084;</button>
-
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="0" value="1"/>
+                <div class="botones-contenedor">
+                    <button id="agregar-carrito"  type="button"    class="btn-comprar"
+                        data-nombre="Sarracenias"
+                        data-imagen="../image/Sarracenias.jpg"
+                        data-precio="$30.000"
+                        data-descripcion="Planta ideal para interiores, fácil de cuidar y resistente.">
+                        Añadir al carrito
+                    </button>
+                    <button class="btn-favorito" title="Favorito">&#10084;</button>
+                </div>
             </div>
         </div>
     </main>
