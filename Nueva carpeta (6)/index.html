@@ -20,9 +20,20 @@
       <div class="icon-cart" title="Carrito" onclick="irACarrito()">
         <span id="carrito-contador" class="carrito-contador">0</span>
       </div>
-      
+
       <div class="icon-heart" title="Favoritos" onclick="irAFavoritos()"></div>
-      <div class="icon-profile" title="Perfil" onclick="irAPerfil()"></div>
+
+      <div id="perfil-contenedor" style="display: flex; flex-direction: column; align-items: center; cursor: pointer;">
+        <div class="icon-profile" id="icono-perfil" title="Perfil" onclick="irAPerfil()" style="display: flex; flex-direction: column; align-items: center; cursor: pointer;">
+          <span id="nombre-usuario" style="font-size: 0.8rem; color: #ff5722; margin-top: 4px; white-space: nowrap;"></span>
+      </div>
+      <button id="btnCerrarSesion" style="margin-top: 6px; font-size: 0.85rem; padding: 4px 8px; border-radius: 6px; border: none; background-color: #ff5722; color: white; cursor: pointer;">Cerrar sesión</button>
+  
+      </div>
+
+
+
+
     </div>
   </header>
 <!-- sintaxis para completar los puntos faltantes -->

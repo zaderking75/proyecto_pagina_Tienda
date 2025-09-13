@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./estilos/panelRegistro.css" />
+    <title>Registro de Usuario</title>
+</head>
+<body>
+    <div class="registro-container">
+        <h2>Crear Cuenta</h2>
+        <form id="registroForm" action="#" method="POST" onsubmit="return validarFormulario();">
+            <label for="nombre">Nombre Completo</label>
+            <input type="text" id="nombre" name="nombre" required />
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required />
+            <label for="confirmarPassword">Confirmar Contraseña</label>
+            <input type="password" id="confirmarPassword" name="confirmarPassword" required />
+            <button type="submit">Registrarse</button>
+        </form>
+        <span class="login-link" onclick="window.location.href='login.html'">¿Ya tienes cuenta? Iniciar sesión</span>
+    </div>
+    <script src="registro.js"></script>
+</body>
+</html>
