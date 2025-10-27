@@ -212,7 +212,7 @@ function App() {
       {currentSection !== "login" && currentSection !== "registro" && (
         <header>
           <div className="header-content">
-            <h1>Mi Tienda</h1>
+            <h1>Carnivero</h1>
             <input
               type="text"
               placeholder="Buscar planta..."
