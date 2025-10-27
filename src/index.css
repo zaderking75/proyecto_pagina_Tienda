@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #213547;
+}
