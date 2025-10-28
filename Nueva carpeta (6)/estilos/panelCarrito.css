@@ -26,6 +26,10 @@ main {
   width: auto;
   background-color: #333;
   color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/swampworld.jpg");
 }
 
 /* para el ajuste de la barra al bajar*/
@@ -62,9 +66,24 @@ main {
   height: 20px;
   max-width: 70vw;
   min-width: 200px;
+
+
     
 }
- 
+.header-content {
+    max-width: 960px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: -15rem;
+    font-weight: bold;
+
+}
 .header-icons {
     display: flex;
     align-items: center;

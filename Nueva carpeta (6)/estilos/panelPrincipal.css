@@ -15,6 +15,10 @@ body {
   width: auto;
   background-color: #333;
   color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/swampworld.jpg");
 }
 
 /* para el ajuste de la barra al bajar*/
@@ -32,6 +36,10 @@ body {
 .logo {
     font-size: 1.5em;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: "Bookman Old Style",Arial;
 }
 
 .logo img{

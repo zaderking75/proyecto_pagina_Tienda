@@ -1,4 +1,5 @@
        body {
+           background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/fondo_registro.jpg");
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             display: flex;

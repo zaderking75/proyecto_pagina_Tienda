@@ -17,10 +17,11 @@ function renderizarCarrito() {
     mensajeVacio.style.display = 'none';
 
     carrito.forEach((producto, index) => {
+        const rutaLimpia = producto.imagen.replace('../', '').replace('./', '');
         const productoDiv = document.createElement('div');
         productoDiv.className = 'producto-carrito';
         productoDiv.innerHTML = `
-  <img src="${producto.imagen || 'https://via.placeholder.com/120'}" alt="${producto.nombre}" style="width:120px; height:100px; object-fit:cover; border-radius:10px; margin-right:20px;">
+  <img src="${rutaLimpia || 'https://via.placeholder.com/120'}" alt="${producto.nombre}" style="width:120px; height:100px; object-fit:cover; border-radius:10px; margin-right:20px;">
   <div class="producto-info" style="flex:1;">
     <h3>${producto.nombre}</h3>
     <p class="descripcion">${producto.descripcion || ''}</p>

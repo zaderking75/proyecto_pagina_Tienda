@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tienda Online - Productos</title>
   <link rel="stylesheet" href="./estilos/panelPrincipal.css" />
-  <link rel="icon" href="image/a039751760d99a16b52e2acea438daa7.jpg">
+  <link rel="icon" href="image/logo_sin_fondo.png">
 </head>
 <body>
   <!-- encabezado -->
   <header class="header" id="header">
     <div class="logo">
-      <img src="./image/a039751760d99a16b52e2acea438daa7.jpg" alt="logo"> 
+      <img src="./image/logo_sin_fondo.png" alt="logo">
+      <h1>Carnivero</h1>
     </div>
     <div class="search-bar">
       <input type="text" placeholder="Buscar..." />
@@ -43,21 +44,21 @@
   <article></article>
   <!-- cuerpo main  -->
   <main>
-  <div class="productos-grid">
+    <div class="productos-grid">
 
-<a href="./productos/producto1.html" class="store-container">
-  <img src="./image/images.jpg" alt="Venus atrapamoscas" />
-  <div class="content">
-    <h3>Venus atrapamoscas</h3>
-    <p>Planta carnívora icónica para coleccionistas.</p>
-    <p><strong>$25000</strong></p>
-    <button 
-      type="button" 
-      onclick="anadirAlCarrito(event, 'Venus atrapamoscas', './image/images.jpg', 25000, 'Planta carnívora icónica para coleccionistas.')">
-      Añadir al carrito
-    </button>
-  </div>
-</a>
+      <a href="./productos/producto1.html" class="store-container">
+        <img src="./image/images.jpg" alt="Venus atrapamoscas" />
+        <div class="content">
+          <h3>Venus atrapamoscas</h3>
+          <p>Planta carnívora icónica para coleccionistas.</p>
+          <p><strong>$25000</strong></p>
+          <button
+                  type="button"
+                  onclick="anadirAlCarrito(event, 'Venus atrapamoscas', './image/images.jpg', 25000, 'Planta carnívora icónica para coleccionistas.')">
+            Añadir al carrito
+          </button>
+        </div>
+      </a>
 
       <a href="./productos/producto2.html" class="store-container">
         <img src="./image/Sarracenias.jpg" alt="Producto 2" />
@@ -65,10 +66,10 @@
           <h3>Sarracenias</h3>
           <p>Planta carnivora de facil cuidado.</p>
           <p><strong>$30000</strong></p>
-          <button type="button" 
-          onclick="anadirAlCarrito(event, 'Sarracenias','./image/Sarracenias.jpg', 30000, 'planta carnivora de facil cuidado')">
-          Añadir al carrito
-        </button>
+          <button type="button"
+                  onclick="anadirAlCarrito(event, 'Sarracenias','./image/Sarracenias.jpg', 30000, 'planta carnivora de facil cuidado')">
+            Añadir al carrito
+          </button>
         </div>
       </a>
 
@@ -78,9 +79,9 @@
           <h3>Darlingtonia</h3>
           <p>Planta especial para los principiantes.</p>
           <p><strong>$25000</strong></p>
-          <button type="button" 
-          onclick="anadirAlCarrito(event,'Darlingtonia','./image/darlingtonia.jpg', 25000 ,'Planta especial para los principiantes.')">
-          Añadir al carrito
+          <button type="button"
+                  onclick="anadirAlCarrito(event,'Darlingtonia','./image/darlingtonia.jpg', 25000 ,'Planta especial para los principiantes.')">
+            Añadir al carrito
           </button>
         </div>
       </a>
@@ -90,6 +91,7 @@
         <div class="content">
           <h3>Drosera</h3>
           <p>planta de facil cuidado</p>
+          <p><strong>$20000</strong></p>
           <button type="button" onclick="anadirAlCarrito(event, 'Drosera','./image/Drosera.jpg', 20000,'Planta de facil cuidado')">Añadir al carrito</button>
         </div>
       </a>
@@ -99,6 +101,7 @@
         <div class="content">
           <h3>Pinguicula</h3>
           <p>La Pinguicula, una elegante cazadora de insectos, es perfecta para un jardín exótico.</p>
+          <p><strong>$30000</strong></p>
           <button type="button" onclick="anadirAlCarrito(event, 'Pinguicula','./image/pinguicula.jpg', 30000,'Planta ideal para interiores, fácil de cuidar y resistente.')">Añadir al carrito</button>
         </div>
       </a>
@@ -108,6 +111,7 @@
         <div class="content">
           <h3>Stylidium debile</h3>
           <p> la planta de gatillo que reacciona con un movimiento sorprendente.</p>
+          <p><strong>$17000</strong></p>
           <button type="button" onclick="anadirAlCarrito(event, 'Stylidium debile','./image/Stylidium debile.jpg',17000,'Rellenar' )">Añadir al carrito</button>
         </div>
       </a>
@@ -117,6 +121,7 @@
         <div class="content">
           <h3>Nepenthes</h3>
           <p>la planta jarra ideal para añadir un toque exótico a tu hogar.</p>
+          <p><strong>$20000</strong></p>
           <button type="button" onclick="anadirAlCarrito(event, 'Nepenthes','./image/Nepenthes.webp',20000,'Rellenar')">Añadir al carrito</button>
         </div>
       </a>
@@ -126,44 +131,47 @@
         <div class="content">
           <h3>Utricularias</h3>
           <p>la planta que devora insectos con sus burbujas submarinas, ideal para acuarios y terrarios.</p>
+          <p><strong>$15000</strong></p>
           <button type="button" onclick="anadirAlCarrito(event, 'Utricularias','./image/Utricularias.jpg',15000, 'Rellenar')">Añadir al carrito</button>
         </div>
       </a>
 
-
-      <!-- para extender la pagina hacia abajo y comprobar la transicion y movimiento del header   -->
-          <a href="./productos/producto9.html" class="store-container">
+      <a href="./productos/producto9.html" class="store-container">
         <img src="./image/Genlisea.webp" alt="Producto 8" />
         <div class="content">
           <h3>Genlisea</h3>
           <p>la 'planta sacacorchos' que caza microorganismos con sus trampas en espiral</p>
+          <p><strong>$20000</strong></p>
           <button type="button" onclick="anadirAlCarrito(event, 'Genlisea', './image/Genlisea.webp',20000,'Rellenar')">Añadir al carrito</button>
         </div>
       </a>
 
-          <a href="./productos/producto10.html" class="store-container">
+      <a href="./productos/producto10.html" class="store-container">
         <img src="./image/heliamphora.webp" alt="Producto 8" />
         <div class="content">
           <h3>Heliamphora</h3>
           <p>la 'planta jarra del sol' de los Tepuis</p>
+          <p><strong>$27000</strong></p>
           <button type="button" onclick="anadirAlCarrito(event, 'Heliamphora', './image/heliamphora.webp',27000,'Rellenar')">Añadir al carrito</button>
         </div>
       </a>
 
-          <a href="./productos/producto11.html" class="store-container">
+      <a href="./productos/producto11.html" class="store-container">
         <img src="./image/Drosophyllum.webp" alt="Producto 8" />
         <div class="content">
           <h3>Drosophyllum</h3>
           <p>la 'planta de rocío' que atrae y captura insectos con su pegajosa trampa de moscas</p>
+          <p><strong>$25000</strong></p>
           <button type="button" onclick="anadirAlCarrito(event, 'Drosophyllum', './image/Drosophyllum.webp',25000,'Rellenar')">Añadir al carrito</button>
         </div>
       </a>
 
-          <a href="./productos/producto12.html" class="store-container">
+      <a href="./productos/producto12.html" class="store-container">
         <img src="./image/Aldrovanda.jpeg" alt="Producto 8" />
         <div class="content">
           <h3>Aldrovanda</h3>
           <p>la 'planta rueda de agua' que atrapa presas con sus trampas subacuáticas</p>
+          <p><strong>$15000</strong></p>
           <button type="button" onclick="anadirAlCarrito(event, 'Aldrovanda', './image/Aldrovanda.jpeg',15000,'Rellenar')">Añadir al carrito</button>
         </div>
       </a>
