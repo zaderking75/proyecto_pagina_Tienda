@@ -1,9 +1,9 @@
 import axios from 'axios';
 
+const baseURL = import.meta.env.MODE === 'production' ? '' : 'http://localhost:8081';
 const api = axios.create({
-    baseURL: 'http://localhost:8081'
+    baseURL: baseURL
 });
-
 api.interceptors.request.use(
     (config) => {
         const token = localStorage.getItem('jwtToken');
