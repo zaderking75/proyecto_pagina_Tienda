@@ -36,11 +36,6 @@ public class SecurityConfig {
         this.jwtAuthFilter = jwtAuthFilter;
     }
 
-
-
-
-
-
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -93,16 +88,18 @@ public class SecurityConfig {
                         // 1. AUTENTICACIÓN (PÚBLICO)
                         .requestMatchers(HttpMethod.POST, "/user/api/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/user/api/register").permitAll()
-
-                        // 2. CONTENIDO (PÚBLICO)
-                        .requestMatchers(HttpMethod.GET, "/**").permitAll() // Incluye /planta/api y /user/api/login (si es GET)
+                        .requestMatchers(HttpMethod.GET, "/planta/api/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/api/uploads").permitAll()
                         .requestMatchers("/h2-console/**").permitAll()
 
+                        // 2. CONTENIDO (PÚBLICO)
+                        .requestMatchers(HttpMethod.GET, "/**").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/api/uploads").permitAll()
+
                         // 3. TRANSACCIONAL (PROTEGIDO - REQUIERE TOKEN)
-                        .requestMatchers(HttpMethod.POST, "/purchase/api").authenticated()
-                        .requestMatchers(HttpMethod.PUT, "/planta/api/**").authenticated()
-                        .requestMatchers(HttpMethod.DELETE, "/planta/api/**").authenticated()
+                        .requestMatchers(HttpMethod.POST, "/purchase/api").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/planta/api/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/planta/api/**").hasRole("ADMIN")
 
                         .anyRequest().authenticated()
                 );
