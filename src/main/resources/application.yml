@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./db/carniveroCrud;AUTO_SERVER=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  jpa:
+    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        use_sql_comments: false
+        format_sql: false
+        hbm2ddl:
+          auto: update
+        dialect: org.hibernate.dialect.H2Dialect
+        show_sql: true
+  sql:
+    init:
+      mode: always
+      continue-on-error: true
+server:
+  port: 8081
+jwt:
+  secret: K7/yT1X0avLam999999999SedeCentral100LaPintanaadmincarniveroclGlobalAdmin2a10kGoXrQfppLBjS7hj6L8EuN0dT7NgWW
+  expiration: 86400
