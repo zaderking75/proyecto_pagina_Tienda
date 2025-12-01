@@ -97,7 +97,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/uploads").permitAll()
 
                         // 3. TRANSACCIONAL (PROTEGIDO - REQUIERE TOKEN)
-                        .requestMatchers(HttpMethod.POST, "/purchase/api").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/purchase/api").permitAll()
                         .requestMatchers(HttpMethod.PUT, "/planta/api/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/planta/api/**").hasRole("ADMIN")
 
