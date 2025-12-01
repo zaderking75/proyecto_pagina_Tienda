@@ -7,7 +7,7 @@ import * as PlantaService from '../services/PlantaService';
 import * as AuthService from '../services/AuthService';
 import * as FavoritoService from '../services/FavoritoService';
 
-
+// Mock de localStorage para pruebas de carrito
 const mockLocalStorage = (() => {
   let store = {};
   return {
@@ -30,7 +30,8 @@ describe('Catalogo Component', () => {
     mockLocalStorage.clear();
     jest.clearAllMocks();
   });
-
+  
+  // Verifica carga inicial de plantas
   test('muestra loading inicial y carga plantas correctamente', async () => {
     const mockPlantas = [
       { id: 1, name: 'Planta Test', price: 10000, stock: 10, image: 'Stylidium debile.jpg', description: 'Test desc' }
@@ -50,6 +51,7 @@ describe('Catalogo Component', () => {
     });
   });
 
+  // Prueba filtrado por búsqueda
   test('filtra plantas por búsqueda', async () => {
     const mockPlantas = [
       { id: 1, name: 'Planta Test', price: 10000, stock: 10, image: 'Stylidium debile.jpg' },
@@ -74,6 +76,7 @@ describe('Catalogo Component', () => {
     });
   });
 
+  // Redirige a login si no hay usuario
   test('redirige a login cuando no hay usuario al agregar al carrito', async () => {
     AuthService.getCurrentUser.mockReturnValue(null);
     const mockPlantas = [{ id: 1, name: 'Planta Test', price: 10000, stock: 10, image: 'Stylidium debile.jpg' }];
@@ -100,6 +103,7 @@ describe('Catalogo Component', () => {
     });
   });
 
+  // Agrega nuevo producto al carrito
   test('agrega producto al carrito correctamente', async () => {
     const mockUser = { id: 1 };
     AuthService.getCurrentUser.mockReturnValue(mockUser);
@@ -123,6 +127,7 @@ describe('Catalogo Component', () => {
     });
   });
 
+  // Incrementa cantidad de producto existente
   test('incrementa cantidad si producto ya existe en carrito', async () => {
     const mockUser = { id: 1 };
     AuthService.getCurrentUser.mockReturnValue(mockUser);
@@ -151,6 +156,7 @@ describe('Catalogo Component', () => {
     });
   });
 
+  // Muestra estado agotado correctamente
   test('muestra productos agotados correctamente', async () => {
     const mockPlantas = [
       { id: 1, name: 'Planta Agotada', price: 10000, stock: 0, image: 'Stylidium debile.jpg' },
@@ -171,6 +177,7 @@ describe('Catalogo Component', () => {
     });
   });
 
+  // Maneja toggle de favoritos
   test('maneja toggle de favoritos correctamente', async () => {
     const mockPlantas = [{ id: 1, name: 'Planta Test', price: 10000, stock: 10 }];
     PlantaService.getAllPlanta.mockResolvedValue({ data: mockPlantas });
@@ -192,3 +199,4 @@ describe('Catalogo Component', () => {
     });
   });
 });
+
