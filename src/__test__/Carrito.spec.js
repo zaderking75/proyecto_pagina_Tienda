@@ -6,6 +6,7 @@ import Carrito from './Carrito';
 import * as AuthService from '../services/AuthService';
 import * as CompraService from '../services/CompraService';
 
+// Mock de localStorage para pruebas de carrito
 const mockLocalStorage = (() => {
   let store = {};
   return {
@@ -29,6 +30,7 @@ describe('Carrito Component', () => {
     jest.clearAllMocks();
   });
 
+   // Muestra carrito vacío correctamente
   test('muestra mensaje cuando carrito está vacío', () => {
     render(
       <BrowserRouter>
@@ -40,6 +42,7 @@ describe('Carrito Component', () => {
     expect(screen.getByText('Ir a comprar')).toBeInTheDocument();
   });
 
+  // Lista productos del carrito correctamente
   test('carga productos del localStorage al montar', async () => {
     const mockProductos = [
       { id: 1, name: 'Planta Test', price: 10000, cantidad: 2, image: 'darlingtonia.jpg.' }
@@ -58,6 +61,7 @@ describe('Carrito Component', () => {
     });
   });
 
+  // Calcula total correctamente
   test('calcula total correctamente', async () => {
     const mockProductos = [
       { id: 1, name: 'Planta 1', price: 10000, cantidad: 2 },
@@ -76,6 +80,7 @@ describe('Carrito Component', () => {
     });
   });
 
+  // Incrementa la cantidad producto del carrito
   test('incrementa cantidad de producto', async () => {
     const mockProducto = [{ id: 1, name: 'Planta Test', price: 10000, cantidad: 1 }];
     mockLocalStorage.getItem.mockReturnValue(JSON.stringify(mockProducto));
@@ -97,6 +102,7 @@ describe('Carrito Component', () => {
     });
   });
 
+  // Decrementa cantidad sin bajar de 1
   test('decrementa cantidad sin bajar de 1', async () => {
     const mockProducto = [{ id: 1, name: 'Planta Test', price: 10000, cantidad: 2 }];
     mockLocalStorage.getItem.mockReturnValue(JSON.stringify(mockProducto));
@@ -118,6 +124,7 @@ describe('Carrito Component', () => {
     });
   });
 
+  // Elimina producto del carrito
   test('elimina producto del carrito', async () => {
     const mockProducto = [{ id: 1, name: 'Planta Test', price: 10000, cantidad: 1 }];
     mockLocalStorage.getItem.mockReturnValue(JSON.stringify(mockProducto));
@@ -138,6 +145,7 @@ describe('Carrito Component', () => {
     });
   });
 
+  // Redirige a login si no hay usuario para checkout
   test('redirige a login si no hay usuario en checkout', async () => {
     AuthService.getCurrentUser.mockReturnValue(null);
     const mockProducto = [{ id: 1, name: 'Planta Test', price: 10000, cantidad: 1 }];
@@ -155,6 +163,7 @@ describe('Carrito Component', () => {
     expect(screen.getByText('Debes iniciar sesión para comprar.')).toBeInTheDocument();
   });
 
+  // Muestra checkout disponible con usuario logueado
   test('procesa checkout exitosamente', async () => {
     const mockUser = { id: 1 };
     AuthService.getCurrentUser.mockReturnValue(mockUser);
@@ -178,3 +187,4 @@ describe('Carrito Component', () => {
     });
   });
 });
+
