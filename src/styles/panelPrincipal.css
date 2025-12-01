@@ -1,9 +1,10 @@
 
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
 }
+
 .header {
   display: flex;
   align-items: center;
@@ -13,10 +14,10 @@ body {
   width: auto;
   background-color: #333;
   color: white;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/ui/swampworld.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/swampworld.jpg");
 }
 
 .header.fixed {
@@ -31,20 +32,20 @@ body {
 }
 
 .logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-family: "Bookman Old Style",Arial;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: "Bookman Old Style",Arial;
 }
 
 .logo img{
-  width: 100%;
-  display: block;
-  border-radius: 12px 12px 0 0;
-  object-fit: cover;
-  height: 75px;
+    width: 100%;
+    display: block;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+    height: 75px;
 }
 
 .search-bar input[type="text"] {
@@ -56,17 +57,17 @@ body {
   height: 20px;
   max-width: 70vw;
   min-width: 200px;
-
+    
 }
-
+  
 .header-icons {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
-
+  
 .header-icons div {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .icon-cart {
@@ -91,15 +92,15 @@ body {
 }
 
 .icon-cart::before {
-  content: "🛒";
-  font-size: 1.5em;
+    content: "🛒";
+    font-size: 1.5em;
 }
-
+  
 .icon-heart::before {
-  content: "❤️";
-  font-size: 1.5em;
+    content: "❤️";
+    font-size: 1.5em;
 }
-
+  
 .icon-profile::before {
   content: "👤";
   font-size: 1.5em;
@@ -108,97 +109,86 @@ body {
 
 
 h1 {
-  text-align: center;
-  margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .productos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px 40px 20px;
-  margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    margin-top: 20px;
 }
-
+  
 .store-container {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  overflow: hidden;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  
 }
 
 .store-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
 .store-container img {
-  width: 100%;
-  display: block;
-  border-radius: 12px 12px 0 0;
-  object-fit: cover;
-  height: 180px;
+    width: 100%;
+    display: block;
+    border-radius: 12px 12px 0 0;
+    object-fit: cover;
+    height: 180px;
 }
 
 .store-container .content {
-  padding: 15px 20px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    padding: 15px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .store-container h3 {
-  margin: 0 0 10px;
-  font-size: 1.2rem;
+    margin: 0 0 10px;
+    font-size: 1.2rem;
 }
 
 .store-container p {
-  flex-grow: 1;
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 15px;
+    flex-grow: 1;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
 }
 
 .store-container button {
-  background-color: #ff5722;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-  align-self: flex-start;
+    background-color: #ff5722;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    align-self: flex-start;
 }
 
 .store-container button:hover {
-  background-color: #e64a19;
+    background-color: #e64a19;
 }
-.catalogo-container {
-  background-color: #A8DCAB;
-  background-image: url("/images/logo_sin_fondo.png");
 
-  background-repeat: repeat;
-  background-position: center;
 
-  background-size: 100px;
 
-  background-blend-mode: soft-light;
-  background-attachment: fixed;
-  min-height: 100vh;
-  padding: 40px 20px;
-}
 .footer {
   background-color: #222;
   color: #ddd;
